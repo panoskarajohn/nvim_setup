@@ -13,6 +13,9 @@ vim.opt.termguicolors = true
 
 vim.opt.smartindent = true
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 vim.opt.wrap = false
 
 vim.g.mapleader = " "
