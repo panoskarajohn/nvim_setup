@@ -1,4 +1,5 @@
 require ("panos.set")
 require ("panos.remap")
 require ("panos.telescope")
+require ("panos.neogit")
 print("Hello from panos")

@@ -11,3 +11,4 @@ end)
 nnoremap("<Leader>pf", function()
     require('telescope.builtin').find_files()
 end)
+
