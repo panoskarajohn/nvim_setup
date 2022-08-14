@@ -11,4 +11,7 @@ end)
 nnoremap("<Leader>pf", function()
     require('telescope.builtin').find_files()
 end)
+nnoremap("<Leader>o", function()
+    require('telescope.builtin').lsp_document_symbols()
+end)
 

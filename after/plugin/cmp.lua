@@ -102,20 +102,16 @@ local function config(_config)
 	}, _config or {})
 end
 
-require("lspconfig").zls.setup(config())
-
+-- typescript
 require("lspconfig").tsserver.setup(config())
-
+-- C, C++
 require("lspconfig").ccls.setup(config())
-
+-- python
 require("lspconfig").jedi_language_server.setup(config())
-
-require("lspconfig").svelte.setup(config())
-
-require("lspconfig").solang.setup(config())
-
+-- css
 require("lspconfig").cssls.setup(config())
 
+-- go lang
 require("lspconfig").gopls.setup(config({
 	cmd = { "gopls", "serve" },
 	settings = {
@@ -163,34 +159,34 @@ require("luasnip.loaders.from_vscode").lazy_load({
 	exclude = {},
 })
 
-local opts = {
-    tools = { -- rust-tools options
-        autoSetHints = true,
-        on_attach = true,
-        inlay_hints = {
-            show_parameter_hints = false,
-            parameter_hints_prefix = "",
-            other_hints_prefix = "",
-        },
-    },
-
-    -- all the opts to send to nvim-lspconfig
-    -- these override the defaults set by rust-tools.nvim
-    -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
-    server = {
-        -- on_attach is a callback called when the language server attachs to the buffer
-        -- on_attach = on_attach,
+local opts = {
+    tools = { -- rust-tools options
+        autoSetHints = true,
+        on_attach = true,
+        inlay_hints = {
+            show_parameter_hints = false,
+            parameter_hints_prefix = "",
+            other_hints_prefix = "",
+        },
+    },
+
+    -- all the opts to send to nvim-lspconfig
+    -- these override the defaults set by rust-tools.nvim
+    -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+    server = {
+        -- on_attach is a callback called when the language server attachs to the buffer
+        -- on_attach = on_attach,
         settings = {
-            -- to enable rust-analyzer settings visit:
-            -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
-            ["rust-analyzer"] = {
-                -- enable clippy on save
-                checkOnSave = {
-                    command = "clippy"
-                },
-            }
-        }
-    },
-}
-
+            -- to enable rust-analyzer settings visit:
+            -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+            ["rust-analyzer"] = {
+                -- enable clippy on save
+                checkOnSave = {
+                    command = "clippy"
+                },
+            }
+        }
+    },
+}
+
 require('rust-tools').setup(opts)

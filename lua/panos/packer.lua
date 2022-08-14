@@ -34,33 +34,33 @@ return require('packer').startup(function()
   -- tag = 'release' -- To use the latest release
   }
 
-  -- Collection of common configurations for the Nvim LSP client
-  use 'neovim/nvim-lspconfig'
-  
-  -- Completion framework
-  use 'hrsh7th/nvim-cmp'
-  
-  -- LSP completion source for nvim-cmp
-  use 'hrsh7th/cmp-nvim-lsp'
-  
-  -- Snippet completion source for nvim-cmp
-  use 'hrsh7th/cmp-vsnip'
-  
-  -- Other usefull completion sources
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
-  
-  -- See hrsh7th's other plugins for more completion sources!
-  
-  -- To enable more of the features of rust-analyzer, such as inlay hints and more!
-  use 'simrat39/rust-tools.nvim'
-  
-  -- Snippet engine
-  use 'hrsh7th/vim-vsnip'
-  
-  -- Fuzzy finder
-  -- Optional
-  use 'nvim-lua/popup.nvim'
+  -- Collection of common configurations for the Nvim LSP client
+  use 'neovim/nvim-lspconfig'
+  
+  -- Completion framework
+  use 'hrsh7th/nvim-cmp'
+  
+  -- LSP completion source for nvim-cmp
+  use 'hrsh7th/cmp-nvim-lsp'
+  
+  -- Snippet completion source for nvim-cmp
+  use 'hrsh7th/cmp-vsnip'
+  
+  -- Other usefull completion sources
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+
+  -- See hrsh7th's other plugins for more completion sources!
+  
+  -- To enable more of the features of rust-analyzer, such as inlay hints and more!
+  use 'simrat39/rust-tools.nvim'
+
+  -- Snippet engine
+  use 'hrsh7th/vim-vsnip'
+
+  -- Fuzzy finder
+  -- Optional
+  use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
   
   --from Prime
