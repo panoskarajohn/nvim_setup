@@ -37,6 +37,8 @@ dap.listeners.before.event_exited["dapui_config"] = function()
     dapui.close()
 end
 
+require("panos.debug.dap")
+
 nnoremap("<Home>", function()
     dapui.toggle(1)
 end)
